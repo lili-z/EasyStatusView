@@ -96,6 +96,11 @@ public class EasyStatusView extends RelativeLayout {
         content();
     }
 
+    /**
+     * 改变视图状态
+     *
+     * @param viewStatus
+     */
     private void changeViewStatus(int viewStatus) {
         if (viewStatus == STATUS_CONTENT) {
 
@@ -116,28 +121,28 @@ public class EasyStatusView extends RelativeLayout {
      * 显示加载中
      */
     public void loading() {
-
+        changeViewStatus(STATUS_LOADING);
     }
 
     /**
      * 显示错误
      */
     public void error() {
-
+        changeViewStatus(STATUS_ERROR);
     }
 
     /**
      * 显示没有网络
      */
     public void noNet() {
-
+        changeViewStatus(STATUS_NO_NET);
     }
 
     /**
      * 显示空视图
      */
     public void empty() {
-
+        changeViewStatus(STATUS_EMPTY);
     }
 
     /**
@@ -147,6 +152,7 @@ public class EasyStatusView extends RelativeLayout {
      */
     public void setEmptyLayoutId(int emptyLayoutId) {
         this.mEmptyLayoutId = emptyLayoutId;
+        mEmptyView = inflater.inflate(emptyLayoutId, null);
     }
 
     /**
@@ -156,6 +162,7 @@ public class EasyStatusView extends RelativeLayout {
      */
     public void setErrorLayoutId(int errorLayoutId) {
         this.mErrorLayoutId = errorLayoutId;
+        mErrorView = inflater.inflate(errorLayoutId, null);
     }
 
     /**
@@ -165,6 +172,7 @@ public class EasyStatusView extends RelativeLayout {
      */
     public void setLoadingLayoutId(int loadingLayoutId) {
         this.mLoadingLayoutId = loadingLayoutId;
+        mLoadingView = inflater.inflate(loadingLayoutId, null);
     }
 
     /**
@@ -174,5 +182,6 @@ public class EasyStatusView extends RelativeLayout {
      */
     public void setNoNetworkLayoutId(int noNetworkLayoutId) {
         this.mNoNetworkLayoutId = noNetworkLayoutId;
+        mNoNetworkView = inflater.inflate(noNetworkLayoutId, null);
     }
 }

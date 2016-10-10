@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<com.marno.easystatelibrary.EasyStatusView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:esv_empty="@layout/layout_empty"
+    app:esv_error="@layout/layout_error"
+    app:esv_loading="@layout/layout_loading"
+    app:esv_noNet="@layout/layout_no_net"
     tools:context="com.marno.easystateview.MainActivity">
 
     <TextView
@@ -19,4 +24,4 @@
         android:layout_height="match_parent"
         android:text="Hello World!"/>
 
-</RelativeLayout>
+</com.marno.easystatelibrary.EasyStatusView>
