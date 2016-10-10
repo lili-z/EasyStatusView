@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EasyStatusView">
+        <attr name="esv_loading" format="reference"/>
+        <attr name="esv_error" format="reference"/>
+        <attr name="esv_empty" format="reference"/>
+        <attr name="esv_noNet" format="reference"/>
+        <attr name="esv_content" format="reference"/>
+    </declare-styleable>
+
+</resources>
