@@ -6,7 +6,7 @@
         <attr name="esv_error" format="reference"/>
         <attr name="esv_empty" format="reference"/>
         <attr name="esv_noNet" format="reference"/>
-        <attr name="esv_content" format="reference"/>
     </declare-styleable>
 
+    <!--<attr name="esv_content" format="reference"/>-->
 </resources>
