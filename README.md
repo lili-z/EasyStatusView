@@ -21,7 +21,7 @@ dependencies {
 ```
 
 ####二、截图预览
-
+![](https://github.com/MarnonDev/EasyStatusView/blob/master/screenshot/EasyStatusView.gif)
 
 ####三、使用方法
 **3.1 属性列表**
