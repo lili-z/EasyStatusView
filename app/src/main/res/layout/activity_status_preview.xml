@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="显示内容"
+            android:text="content"
+            android:textColor="@android:color/holo_orange_dark"
             android:textSize="30dp"/>
 
     </com.marno.easystatelibrary.EasyStatusView>

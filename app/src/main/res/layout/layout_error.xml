@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="error"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="30sp"/>
 
 </LinearLayout>

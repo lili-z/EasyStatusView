@@ -54,6 +54,7 @@ dependencies {
 >|getNoNetworkView()|获取无网络布局|
 
 **3.3 示例代码**
+
 在布局资源文件中中指定对应视图布局资源id
 ```
 <com.marno.easystatelibrary.EasyStatusView
