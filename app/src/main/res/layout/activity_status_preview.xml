@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.marno.easystatelibrary.EasyStatusView
+        android:id="@+id/esvlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:esv_empty="@layout/layout_empty"
+        app:esv_error="@layout/layout_error"
+        app:esv_loading="@layout/layout_loading"
+        app:esv_noNet="@layout/layout_no_net">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="显示内容"
+            android:textSize="30dp"/>
+
+    </com.marno.easystatelibrary.EasyStatusView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_loading"
+            style="@style/TextView_CommonStyle"
+            android:background="@android:color/holo_red_light"
+            android:text="loading"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/TextView_CommonStyle"
+            android:background="@android:color/holo_orange_dark"
+            android:text="content"/>
+
+        <TextView
+            android:id="@+id/tv_empty"
+            style="@style/TextView_CommonStyle"
+            android:background="@android:color/holo_orange_light"
+            android:text="empty"/>
+
+        <TextView
+            android:id="@+id/tv_error"
+            style="@style/TextView_CommonStyle"
+            android:background="@android:color/holo_green_light"
+            android:text="error"/>
+
+        <TextView
+            android:id="@+id/tv_noNet"
+            style="@style/TextView_CommonStyle"
+            android:background="@android:color/holo_blue_dark"
+            android:text="noNet"/>
+
+    </LinearLayout>
+</LinearLayout>

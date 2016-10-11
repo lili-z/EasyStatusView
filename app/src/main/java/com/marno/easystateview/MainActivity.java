@@ -1,80 +1,32 @@
 package com.marno.easystateview;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
 
-import com.marno.easystatelibrary.EasyStatusView;
-
-import java.util.Timer;
-import java.util.TimerTask;
-
 public class MainActivity extends AppCompatActivity {
-
-    private EasyStatusView mEsvLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        mEsvLayout = (EasyStatusView) findViewById(R.id.esvlayout);
-        View emptyView = LayoutInflater.from(this).inflate(R.layout.layout_empty_changed, null);
-        mEsvLayout.setEmptyView(emptyView);
-        mEsvLayout.setErrorLayoutId(R.layout.layout_error);
-        mEsvLayout.empty();
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_mockdata:
+                start(MockDataActivity.class);
+                break;
+            case R.id.btn_status_preview:
+                start(StatusPreviewActivity.class);
+                break;
+        }
+    }
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mEsvLayout.error();
-                    }
-                });
-            }
-        }, 2000);
-
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mEsvLayout.empty();
-                    }
-                });
-            }
-        }, 3000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mEsvLayout.loading();
-                    }
-                });
-            }
-        }, 4000);
-
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mEsvLayout.content();
-                    }
-                });
-            }
-        }, 5000);
-
-
+    private void start(Class<? extends Activity> clazz) {
+        Intent intent = new Intent(this, clazz);
+        startActivity(intent);
     }
 }

@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:text="error"
         android:textColor="@color/colorPrimary"
-        android:textSize="30dp"/>
+        android:textSize="30sp"/>
 
 </LinearLayout>
